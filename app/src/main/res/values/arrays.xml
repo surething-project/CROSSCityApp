@@ -1,0 +1,16 @@
+<resources>
+    <!-- Location Certification Strategies -->
+    <string name="wifi_strategy">Leveraging Wi-Fi Infrastructure</string>
+    <string name="peer_strategy">Leveraging On-Site Peers</string>
+    <string name="all_strategies">Leveraging Both</string>
+    <string-array name="strategies">
+        <item>@string/wifi_strategy</item>
+        <item>@string/peer_strategy</item>
+        <item>@string/all_strategies</item>
+    </string-array>
+    <string-array name="strategies_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+</resources>

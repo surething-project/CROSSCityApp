@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="1dp"
+    android:background="@drawable/border_primary_variant"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/poi_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/name"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/text_margin"
+        android:gravity="center"
+        android:maxLines="3"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textSize="@dimen/medium_font_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/barrier"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="name" />
+
+    <ImageView
+        android:id="@+id/pending_submission"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_margin="1dp"
+        android:contentDescription="@string/visit_queued"
+        android:src="@drawable/baseline_pending_24"
+        android:tooltipText="@string/visit_queued"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/start_visit"
+        app:layout_constraintStart_toEndOf="@id/barrier"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/amber" />
+
+    <ImageView
+        android:id="@+id/incomplete"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_margin="1dp"
+        android:contentDescription="@string/visit_incomplete"
+        android:src="@drawable/baseline_incomplete_circle_24"
+        android:tooltipText="@string/visit_incomplete"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/start_visit"
+        app:layout_constraintStart_toEndOf="@id/barrier"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/amber" />
+
+    <ImageView
+        android:id="@+id/rejected"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_margin="1dp"
+        android:contentDescription="@string/visit_rejected"
+        android:src="@drawable/baseline_thumb_down_alt_24"
+        android:tooltipText="@string/visit_rejected"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/start_visit"
+        app:layout_constraintStart_toEndOf="@id/barrier"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/red" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/start_visit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:clickable="true"
+        android:contentDescription="@string/start_visit"
+        android:src="@drawable/baseline_tour_24"
+        android:tooltipText="@string/start_visit"
+        android:visibility="gone"
+        app:backgroundTint="?attr/colorPrimary"
+        app:fabCustomSize="72dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:maxImageSize="48dp"
+        app:rippleColor="@color/black_overlay"
+        app:tint="@color/white" />
+
+    <ImageView
+        android:id="@+id/verified"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_margin="1dp"
+        android:contentDescription="@string/visit_verified"
+        android:src="@drawable/baseline_thumb_up_alt_24"
+        android:tooltipText="@string/visit_verified"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/green" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/fullscreenBackgroundColor"
+    android:paddingHorizontal="@dimen/fragment_horizontal_margin"
+    android:paddingVertical="@dimen/fragment_vertical_margin"
+    android:theme="@style/ThemeOverlay.CROSSCityApp.FullscreenContainer"
+    tools:context=".ui.visitreward.VisitRewardFragment">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/treasure_animation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="false"
+        app:lottie_fileName="lottie/28404-gems-treasure.json"
+        app:lottie_loop="false"
+        app:lottie_speed=".8" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/rewards"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/claim"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/gems"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/text_margin"
+                    android:layout_marginTop="@dimen/text_margin"
+                    android:layout_marginEnd="@dimen/nav_header_vertical_spacing"
+                    android:layout_marginBottom="@dimen/text_margin"
+                    android:textAppearance="?attr/textAppearanceListItem"
+                    android:textColor="?attr/fullscreenTextColor"
+                    android:textSize="@dimen/xxlarge_font_size"
+                    android:textStyle="bold|italic" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/gems_animation"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_marginTop="@dimen/text_margin"
+                    android:layout_marginEnd="@dimen/text_margin"
+                    android:layout_marginBottom="@dimen/text_margin"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="lottie/28399-discovered-treasure.json"
+                    app:lottie_loop="true" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/gems_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:contentDescription="@string/tip"
+                    android:src="@drawable/baseline_lightbulb_24"
+                    android:tooltipText="@string/tip_gems"
+                    app:backgroundTint="@color/yellow"
+                    app:fabSize="mini" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/text_margin"
+                    android:layout_marginTop="@dimen/text_margin"
+                    android:layout_marginEnd="@dimen/nav_header_vertical_spacing"
+                    android:layout_marginBottom="@dimen/text_margin"
+                    android:textAppearance="?attr/textAppearanceListItem"
+                    android:textColor="?attr/fullscreenTextColor"
+                    android:textSize="@dimen/xxlarge_font_size"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:id="@+id/xp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_margin"
+                    android:layout_marginEnd="@dimen/text_margin"
+                    android:layout_marginBottom="@dimen/text_margin"
+                    android:text="@string/score_unit"
+                    android:textAppearance="?attr/textAppearanceListItem"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/xxlarge_font_size"
+                    android:textStyle="bold|italic" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/xp_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:contentDescription="@string/tip"
+                    android:src="@drawable/baseline_lightbulb_24"
+                    android:tooltipText="@string/tip_score"
+                    app:backgroundTint="@color/yellow"
+                    app:fabSize="mini" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/badges_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/nav_header_vertical_spacing"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/number_of_badges"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/text_margin"
+                    android:textColor="?attr/fullscreenTextColor"
+                    android:textSize="@dimen/xlarge_font_size"
+                    android:textStyle="bold|italic" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:id="@+id/badges"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" />
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="start"
+                    android:layout_margin="@dimen/text_margin"
+                    android:scaleX="-1"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="lottie/11272-party-popper.json"
+                    app:lottie_loop="true" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="end"
+                    android:layout_margin="@dimen/text_margin"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="lottie/11272-party-popper.json"
+                    app:lottie_loop="true" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/claim"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginVertical="@dimen/fab_margin"
+        android:clickable="true"
+        android:text="@string/claim"
+        android:textColor="@color/black"
+        android:textSize="@dimen/xxlarge_font_size"
+        android:textStyle="bold"
+        android:tooltipText="@string/claim"
+        android:visibility="gone"
+        app:backgroundTint="@color/yellow"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rewards"
+        app:layout_constraintVertical_weight="1"
+        app:rippleColor="@color/black_overlay" />
+</androidx.constraintlayout.widget.ConstraintLayout>

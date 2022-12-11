@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Shared preferences backups cannot be allowed because after uninstalling the application,
+    the backup encryption file cannot be decrypted after a fresh install.
+-->
+<full-backup-content>
+    <exclude domain="sharedpref" />
+</full-backup-content>

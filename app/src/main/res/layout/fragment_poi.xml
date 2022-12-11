@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.poi.POIFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="@dimen/fragment_horizontal_margin"
+            android:paddingVertical="@dimen/fragment_vertical_margin">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:id="@+id/web_url_layout"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="-100dp"
+                android:layout_marginEnd="-100dp"
+                android:elevation="1dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/poi_image"
+                app:layout_constraintTop_toTopOf="@id/poi_image">
+
+                <Button
+                    android:id="@+id/web_url"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:contentDescription="@string/visit_website"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    android:tooltipText="@string/visit_website"
+                    app:backgroundTint="@color/blue"
+                    app:rippleColor="@color/black_overlay"
+                    app:strokeColor="?attr/colorPrimary" />
+
+                <ImageView
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:layout_margin="27dp"
+                    android:contentDescription="@string/visit_website"
+                    android:src="@drawable/baseline_link_24"
+                    app:layout_anchor="@id/web_url"
+                    app:layout_anchorGravity="bottom|start"
+                    app:tint="@color/white" />
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+            <ImageView
+                android:id="@+id/poi_image"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/border_primary_variant"
+                android:contentDescription="@string/poi_image"
+                app:layout_constraintBottom_toTopOf="@+id/poi_name"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <TextView
+                android:id="@+id/poi_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:textAlignment="center"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textSize="@dimen/xlarge_font_size"
+                app:layout_constraintBottom_toTopOf="@id/poi_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/poi_image" />
+
+            <TextView
+                android:id="@+id/poi_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_primary_variant"
+                android:padding="@dimen/text_margin"
+                android:textAlignment="center"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textSize="@dimen/medium_font_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/poi_name" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/start_visit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:clickable="true"
+        android:contentDescription="@string/start_visit"
+        android:src="@drawable/baseline_tour_24"
+        android:tooltipText="@string/start_visit"
+        android:visibility="gone"
+        app:backgroundTint="?attr/colorPrimary"
+        app:fabCustomSize="72dp"
+        app:maxImageSize="48dp"
+        app:rippleColor="@color/black_overlay"
+        app:tint="@color/white" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,79 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">CROSS City</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_information">Information</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <!-- Menus -->
+    <string name="menu_badge">Badge</string>
+    <string name="menu_badging">Badges</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_initiated_routes">Initiated routes</string>
+    <string name="menu_login">Login</string>
+    <string name="menu_poi">Point of interest</string>
+    <string name="menu_pois_selection">Points of interest to visit</string>
+    <string name="menu_profile">User Profile</string>
+    <string name="menu_route">Route</string>
+    <string name="menu_scoreboard">Scoreboard</string>
+    <string name="menu_tourist_card">Tourist card</string>
+    <string name="menu_visit_end">End of visit</string>
+    <string name="menu_visit_reward">Visit reward</string>
+    <string name="menu_visit_start">Start of visit</string>
+
+    <!-- Raw Strings -->
+    <string name="all_time">All-Time</string>
+    <string name="badge_image">Badge image</string>
+    <string name="claim">Claim</string>
+    <string name="collection">Collection</string>
+    <string name="directions">Directions</string>
+    <string name="earned">Earned</string>
+    <string name="end_visit">End the visit</string>
+    <string name="go">Go</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="password">Password</string>
+    <string name="poi_image">Point of interest image</string>
+    <string name="pois_list_label">Points of interest:</string>
+    <string name="qr_code">QR code</string>
+    <string name="route_image">Route image</string>
+    <string name="score_unit">XP</string>
+    <string name="seasonal">Seasonal</string>
+    <string name="signin">Sign in</string>
+    <string name="signup">Sign up</string>
+    <string name="start_route">Start the route</string>
+    <string name="start_visit">Start the visit</string>
+    <string name="tip">Tip</string>
+    <string name="traveled">Traveled</string>
+    <string name="untraveled">Untraveled</string>
+    <string name="username">Username</string>
+    <string name="visit_incomplete">Visit is incomplete.</string>
+    <string name="visit_queued">Visit queued for submission.</string>
+    <string name="visit_rejected">Visit was rejected.</string>
+    <string name="visit_verified">Your visit has been successfully verified!</string>
+    <string name="visit_website">Visit the website</string>
+    <string name="weekly">Weekly</string>
+
+    <!-- Info Strings -->
+    <string name="badges_earned">Badges Earned: %1$d</string>
+    <string name="information_gems">"For every visit you complete and is successfully validated, you receive 50 gems, for every endorsement you issue, using the peer strategy during your visits, which helps to certify another user's visit, you receive 5 gems per be a good fellow.\n\nYou can use the gems later to buy tickets for upcoming visits to points of interest, simply address yourself to the entrance and pay with the QR code shown here, the amount of gems to be discounted for the ticket purchase is informed by the receptionist.\n"</string>
+    <string name="information_score">"The scoreboard is divided into: all time, where you're placed based on the XP you've earned since the beginning of time; seasonal, where you're placed based on the XP you've earned in the last 4 months; weekly, where you're placed based on the XP you've earned in the current week.\n\nFor every visit you complete and is successfully validated, you receive 100 XP, for every endorsement you issue, using the peer strategy during your visits, which helps to certify another user's visit, you receive 10 XP per be a good fellow.\n"</string>
+    <string name="minimum_visit_time">Minimum visit time: %1$s</string>
+    <string name="not_enough_confidence">Unable to verify your visit due to lack of confidence in the evidence you collected.</string>
+    <string name="peer_endorsements_issued">Peer endorsements issued: %1$d</string>
+    <string name="peer_evidences_collected">Peer evidence collected: %1$d</string>
+    <string name="short_duration">You have not spent the pre-set minimum amount of time (%1$s) at the point of interest.</string>
+    <string name="tip_gems">Gems are credits for purchasing PoI tickets by scanning the QR code on the card at the entrance.</string>
+    <string name="tip_score">With the experience points you earn, you can move up on the scoreboard.</string>
+    <string name="trip_completed">Congratulations, you have successfully completed the route!</string>
+    <string name="trip_progress">Visited %1$d/%2$d</string>
+    <string name="visit_submission_failed">Failed to submit visit: %1$s</string>
+    <string name="visit_submission_partially_successful">Pending submissions from visits were partially successful.</string>
+    <string name="visit_submission_successful">Pending submissions from visits were successful.</string>
+    <string name="wifi_evidences_collected">Wi-Fi evidence collected: %1$d</string>
+    <string name="wifi_scans_performed">Wi-Fi scans performed: %1$d</string>
+
+    <!-- BLE Identifiers -->
+    <string name="request_characteristic_uuid" tools:ignore="TypographyDashes">234d5dc7-ea18-4489-9d7e-7a4ea390c8bc</string>
+    <string name="response_characteristic_uuid" tools:ignore="TypographyDashes">883919c6-6c41-4d40-b539-7f89ce0828cb</string>
+    <string name="service_uuid" tools:ignore="TypographyDashes">eaec8072-c3ea-48af-b115-a99058ece659</string>
+</resources>

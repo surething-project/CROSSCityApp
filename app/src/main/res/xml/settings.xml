@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.preference.ListPreference
+        android:defaultValue="3"
+        android:entries="@array/strategies"
+        android:entryValues="@array/strategies_values"
+        android:key="strategies"
+        android:summary="Select the strategies you want to use to certify your location during a visit."
+        android:title="Location Certification Strategies" />
+</androidx.preference.PreferenceScreen>

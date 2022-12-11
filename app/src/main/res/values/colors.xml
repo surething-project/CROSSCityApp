@@ -1,0 +1,17 @@
+<resources>
+    <color name="amber">#FFC107</color>
+    <color name="amber_darken">#FF8F00</color>
+    <color name="black">#FF000000</color>
+    <color name="black_overlay">#22000000</color>
+    <color name="blue">#2196F3</color>
+    <color name="blue_darken">#1565C0</color>
+    <color name="brown">#6D4C41</color>
+    <color name="green">#388E3C</color>
+    <color name="grey">#757575</color>
+    <color name="grey_lighten">#9E9E9E</color>
+    <color name="red">#D32F2F</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#FBC02D</color>
+
+    <color name="ic_launcher_background">@color/blue</color>
+</resources>

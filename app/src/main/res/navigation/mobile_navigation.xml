@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="pt.ulisboa.tecnico.cross.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_home_to_route"
+            app:destination="@id/nav_route"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_route"
+        android:name="pt.ulisboa.tecnico.cross.ui.route.RouteFragment"
+        android:label="@string/menu_route"
+        tools:layout="@layout/fragment_route">
+
+        <action
+            android:id="@+id/action_route_to_poi"
+            app:destination="@id/nav_poi"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_route_to_pois_selection"
+            app:destination="@id/nav_pois_selection"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_route_to_login"
+            app:destination="@id/nav_login"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_poi"
+        android:name="pt.ulisboa.tecnico.cross.ui.poi.POIFragment"
+        android:label="@string/menu_poi"
+        tools:layout="@layout/fragment_poi">
+
+        <action
+            android:id="@+id/action_poi_to_visit_start"
+            app:destination="@id/nav_visit_start"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_poi_to_login"
+            app:destination="@id/nav_login"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_initiated_routes"
+        android:name="pt.ulisboa.tecnico.cross.ui.initiatedroutes.InitiatedRoutesFragment"
+        android:label="@string/menu_initiated_routes"
+        tools:layout="@layout/fragment_initiated_routes_list">
+
+        <action
+            android:id="@+id/action_initiated_routes_to_pois_selection"
+            app:destination="@id/nav_pois_selection"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_pois_selection"
+        android:name="pt.ulisboa.tecnico.cross.ui.poisselection.POIsSelectionFragment"
+        android:label="@string/menu_pois_selection"
+        tools:layout="@layout/fragment_pois_selection_list">
+
+        <action
+            android:id="@+id/action_pois_selection_to_poi"
+            app:destination="@id/nav_poi"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_pois_selection_to_visit_start"
+            app:destination="@id/nav_visit_start"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_visit_start"
+        android:name="pt.ulisboa.tecnico.cross.ui.visitstart.VisitStartFragment"
+        android:label="@string/menu_visit_start"
+        tools:layout="@layout/fragment_visit_start">
+
+        <action
+            android:id="@+id/action_visit_start_to_visit_end"
+            app:destination="@id/nav_visit_end"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_visit_end"
+        android:name="pt.ulisboa.tecnico.cross.ui.visitend.VisitEndFragment"
+        android:label="@string/menu_visit_end"
+        tools:layout="@layout/fragment_visit_end">
+
+        <action
+            android:id="@+id/action_visit_end_to_visit_reward"
+            app:destination="@id/nav_visit_reward"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/cyclic_action_visit_end_to_pois_selection"
+            app:destination="@id/nav_pois_selection"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/nav_pois_selection"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_visit_end_to_pois_selection"
+            app:destination="@id/nav_pois_selection"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/nav_visit_start"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_visit_reward"
+        android:name="pt.ulisboa.tecnico.cross.ui.visitreward.VisitRewardFragment"
+        android:label="@string/menu_visit_reward"
+        tools:layout="@layout/fragment_visit_reward">
+        <argument
+            android:name="awarded_gems"
+            app:argType="integer" />
+        <argument
+            android:name="awarded_score"
+            app:argType="integer" />
+        <argument
+            android:name="awarded_badges"
+            app:argType="string[]" />
+
+        <action
+            android:id="@+id/cyclic_action_visit_reward_to_pois_selection"
+            app:destination="@id/nav_pois_selection"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/nav_pois_selection"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_visit_reward_to_pois_selection"
+            app:destination="@id/nav_pois_selection"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/nav_visit_start"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_visit_reward_to_badge"
+            app:destination="@id/nav_badge"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_badging"
+        android:name="pt.ulisboa.tecnico.cross.ui.badging.BadgingFragment"
+        android:label="@string/menu_badging"
+        tools:layout="@layout/fragment_badging">
+
+        <action
+            android:id="@+id/action_badging_to_badge"
+            app:destination="@id/nav_badge"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_badge"
+        android:name="pt.ulisboa.tecnico.cross.ui.badge.BadgeFragment"
+        android:label="@string/menu_badge"
+        tools:layout="@layout/fragment_badge" />
+
+    <fragment
+        android:id="@+id/nav_scoreboard"
+        android:name="pt.ulisboa.tecnico.cross.ui.scoreboard.ScoreboardFragment"
+        android:label="@string/menu_scoreboard"
+        tools:layout="@layout/fragment_scoreboard">
+        <argument
+            android:name="category"
+            android:defaultValue="0"
+            app:argType="integer" />
+
+        <action
+            android:id="@+id/action_scoreboard_to_profile"
+            app:destination="@id/nav_profile"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="pt.ulisboa.tecnico.cross.ui.profile.ProfileFragment"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/fragment_profile">
+        <argument
+            android:name="username"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+        <action
+            android:id="@+id/action_profile_to_scoreboard"
+            app:destination="@id/nav_scoreboard"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profile_to_badge"
+            app:destination="@id/nav_badge"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_tourist_card"
+        android:name="pt.ulisboa.tecnico.cross.ui.touristcard.TouristCardFragment"
+        android:label="@string/menu_tourist_card"
+        tools:layout="@layout/fragment_tourist_card" />
+
+    <fragment
+        android:id="@+id/nav_login"
+        android:name="pt.ulisboa.tecnico.cross.ui.login.LoginFragment"
+        android:label="@string/menu_login"
+        tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="pt.ulisboa.tecnico.cross.SettingsFragment"
+        android:label="@string/action_settings" />
+</navigation>
