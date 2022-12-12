@@ -31,3 +31,21 @@ This mobile application is an extended re-implementation of the CROSS City app [
 | Name | University | More info |
 |:-----|:-----------|:---------:|
 | Ricardo Grade | Instituto Superior Técnico | [<img src="https://i.ibb.co/brG8fnX/mail-6.png" width="17">](mailto:ricardo.grade@tecnico.ulisboa.pt "ricardo.grade@tecnico.ulisboa.pt") [<img src="https://github.githubassets.com/favicon.ico" width="17">](https://github.com/RicardoGrade "RicardoGrade") [<img src="https://i.ibb.co/TvQPw7N/linkedin-logo.png" width="17">](https://www.linkedin.com/in/RicardoGrade "RicardoGrade") |
+
+## Publication
+
+Grade, R.; Eisa, S. & Pardal, M. L.  
+_Bluetooth Peer-to-Peer Location Certification with a Gamified Mobile Application_  
+21st IEEE International Symposium on Network Computing and Applications (NCA), 2022  
+
+```bibtex
+@InProceedings{Grade_2022_NCA_P2P-Witnessing,
+  author    = {Ricardo Grade and Samih Eisa and Miguel L. Pardal},
+  booktitle = {21st IEEE International Symposium on Network Computing and Applications (NCA)},
+  title     = {{Bluetooth Peer-to-Peer Location Certification with a Gamified Mobile Application}},
+  year      = {2022},
+  month     = dec,
+  abstract  = {Nowadays, tourists turn to digital platforms to discover new places to explore. CROSS City is a smart tourism mobile application that enhances the user experience of tourists visiting points of interest in a route by rewarding them in the end, if they actually visited all locations. From a technical standpoint, the user location is certified resorting to strategies that take advantage of both the diversity of the existing Wi-Fi network infrastructure throughout the city, as well as the presence of other users at the same site using Bluetooth. This work developed a new, peer-to-peer location certification strategy and added gamification elements to encourage users to keep the wireless radios turned on and use the app more. This work was evaluated both in laboratory experiments and with users in a real-world scenario which demonstrated that the new Bluetooth peer-based strategy is both feasible and resistant to collusion attacks.},
+  keywords  = {Location Certification, Location Spoofing Prevention, Peer-to-Peer Communication, Bluetooth, Internet of Things, Gamification, User Experience},
+}
+```
